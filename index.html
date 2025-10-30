@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -15,51 +16,71 @@
 
     <title>Frontend Mentor | Interactive pricing component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
+
   <body>
     <header class="hero">
       <h1 class="hero_title">Simple, traffic-based pricing</h1>
       <p class="hero__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
     </header>
 
-    <main class="card">
-      <div>Pageviews</div>
-      <div>$ /month</div>
+    <main class="card"role="region" aria-labelledby="pricing-title">
+      <div class="card__top">
+        <p id="pricing-title" class="card__views">  
+          <span id="pageviews">100K</span> pageviews
+        </p>
+        <p class="card__price">
+          <span id="price" aria-live="polite" aria-atomic="true">$16.00</span>
+          <span class="card__price-term">/ month</span>
+        </p>
       <div>
-        <input type="range" min="1" max="5" value="1" class="slider" id="myRange"></input>
-        <script src="scr-progrsteps.js"></script>
-        <label class="custom-checkbox">
-        <input type="checkbox" class="checkbox">
-        <span class="checkbox"></span></label>
+
+        <label for="views" class="sr-only">Select monthly pageviews</label>
+        <input 
+        id="views"
+        class="slider"
+        type="range" 
+        min="0" 
+        max="4" 
+        value="2" 
+        step="1"
+        aria-valuemin="0"
+        aria-valuemax="4"
+        aria-valuenow="2"
+        aria-label="Pageviews level"/>
+
+      <div class="billing">
+        <span>Monthly Billing</span>
+
+      <button
+        id="billingToggle"
+        class="toggle"
+        type="button"
+        role="switch";
+        aria_checked="false"
+        aria-label="Toggle yearly billing">
+      </button>
+        <span class="billing__yearly">
+          Yearly Billing
+          <span class="badge">-25%</span>
+        </span>
       </div>
-      <div>Monthly Billing</div>
-      <div>Yearly Billing</div>
-      <div>25% discount</div>
-      <div>
-        <li>
-          <ul>
-            Unlimited websites
-          </ul>
-          <ul>
-            100% data ownership
-          </ul>
-          <ul>
-            Email reports
-          </ul>
-        </li>
+      <hr class="divider" />
+
+      <div class="card__bottom">
+        <ul class="features">
+          <li>
+            <span class="check" aria-hidden="true">✓</span>Unlimited websites
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>100% data ownership
+          </li>
+          <li><span class="check" aria-hidden="true">✓</span>Email reports</li>
+        </ul>
+        <button class="cta" type="button">Start my trial</button>
       </div>
-      <div>Start my trial</div>
     </main>
+    <script src="script.js"></script>
 
     <div class="attribution">
       Challenge by
