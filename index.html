@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="hero_title">Simple, traffic-based pricing</h1>
+      <p class="hero__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+
+    <main class="card">
+      <div>Pageviews</div>
+      <div>$ /month</div>
+      <div>
+        <input type="range" min="1" max="5" value="1" class="slider" id="myRange"></input>
+        <script src="scr-progrsteps.js"></script>
+        <label class="custom-checkbox">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox"></span></label>
+      </div>
+      <div>Monthly Billing</div>
+      <div>Yearly Billing</div>
+      <div>25% discount</div>
+      <div>
+        <li>
+          <ul>
+            Unlimited websites
+          </ul>
+          <ul>
+            100% data ownership
+          </ul>
+          <ul>
+            Email reports
+          </ul>
+        </li>
+      </div>
+      <div>Start my trial</div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yolanda</a>.
+    </div>
+  </body>
+</html>
