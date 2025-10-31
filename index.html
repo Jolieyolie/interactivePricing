@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -13,58 +16,65 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-
     <title>Frontend Mentor | Interactive pricing component</title>
-
   </head>
 
   <body>
     <header class="hero">
       <h1 class="hero_title">Simple, traffic-based pricing</h1>
-      <p class="hero__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+      <p class="hero__subtitle">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
     </header>
 
-    <main class="card"role="region" aria-labelledby="pricing-title">
+    <main class="card" role="region" aria-labelledby="pricing-title">
       <div class="card__top">
-        <p id="pricing-title" class="card__views">  
+        <p id="pricing-title" class="card__views">
           <span id="pageviews">100K</span> pageviews
         </p>
+        <div class="slider_container">
+          <label for="views" class="sr-only">Select monthly pageviews</label>
+          <input
+            id="views"
+            class="slider"
+            type="range"
+            min="0"
+            max="4"
+            value="2"
+            step="1"
+            aria-valuemin="0"
+            aria-valuemax="4"
+            aria-valuenow="2"
+            aria-label="Pageviews level"
+          />
+        </div>
         <p class="card__price">
           <span id="price" aria-live="polite" aria-atomic="true">$16.00</span>
           <span class="card__price-term">/ month</span>
         </p>
-      <div>
-
-        <label for="views" class="sr-only">Select monthly pageviews</label>
-        <input 
-        id="views"
-        class="slider"
-        type="range" 
-        min="0" 
-        max="4" 
-        value="2" 
-        step="1"
-        aria-valuemin="0"
-        aria-valuemax="4"
-        aria-valuenow="2"
-        aria-label="Pageviews level"/>
+      </div>
 
       <div class="billing">
         <span>Monthly Billing</span>
 
-      <button
-        id="billingToggle"
-        class="toggle"
-        type="button"
-        role="switch";
-        aria_checked="false"
-        aria-label="Toggle yearly billing">
-      </button>
+        <button
+          id="billingToggle"
+          class="toggle"
+          type="button"
+          role="switch"
+          ;
+          aria_checked="false"
+          aria-label="Toggle yearly billing"
+        >
+          <span class="toggle__knob"></span>
+        </button>
+
         <span class="billing__yearly">
           Yearly Billing
           <span class="badge">-25%</span>
         </span>
       </div>
+
       <hr class="divider" />
 
       <div class="card__bottom">
@@ -77,11 +87,12 @@
           </li>
           <li><span class="check" aria-hidden="true">✓</span>Email reports</li>
         </ul>
+
         <button class="cta" type="button">Start my trial</button>
       </div>
     </main>
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

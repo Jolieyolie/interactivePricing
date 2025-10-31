@@ -20,6 +20,7 @@ body {
 }
 body {
   font-family: "Manrope";
+  font-size: 15px;
   background: radial-gradient(
     1200px 700px at 50% -10%,
     #eef3ff 0%,
@@ -69,12 +70,7 @@ body {
   box-shadow: var(--shadow);
   padding: 26px 22px;
 }
-.card__top {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 14px;
-}
+
 .card__views {
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -165,13 +161,13 @@ body {
   align-items: center;
   gap: 14px;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 400;
   margin: 8px 0 6px;
   flex-wrap: wrap;
 }
 .toggle {
-  --w: 62px;
-  --h: 34px;
+  --w: 48px;
+  --h: 23px;
   width: var(--w);
   height: var(--h);
   border-radius: 999px;
@@ -208,7 +204,7 @@ body {
   font-weight: 800;
   color: #ff8a65;
   background: rgba(255, 138, 101, 0.15);
-  padding: 6px 10px;
+  padding: 3px 6px;
   border-radius: 999px;
   font-size: 0.875rem;
 }
@@ -221,7 +217,7 @@ body {
 }
 
 .card__bottom {
-  display: grid;
+  display: flex;
   gap: 18px;
 }
 .features {
@@ -282,17 +278,28 @@ body {
     padding: 36px 40px;
   }
   .card__top {
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .card__views {
     text-align: left;
+    order: 1;
+    width: calc(50% - 7px);
   }
   .card__price {
     text-align: right;
+    order: 2;
+    width: calc(50% - 7px);
+  }
+  .slider_container {
+    order: 3;
+    width: 100%;
   }
   .card__bottom {
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
   }
   .cta {
